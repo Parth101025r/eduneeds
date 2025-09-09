@@ -13,55 +13,53 @@
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg sticky-top  bg-body-tertiary" style="position: sticky; height: 10vh;">
+    <!-- navigation bar starts here -->
+    <nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary" style="position: sticky;">
         <div class="container-fluid">
             <a class="navbar-brand navigation-bar" href="#"><img src="assets/img/waveBG.jpg"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvas" aria-controls="navbarOffcanvas" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <button type="button" class="btn-close d-lg-none ms-auto mb-3" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-label="Close"></button>
 
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-                </ul>
-
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="gap: 40px;">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html"> About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html"> contact Us</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Courses
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">IIT/JEE</a></li>
-                            <li><a class="dropdown-item" href="#">NEET/UG</a></li>
-                            <li><a class="dropdown-item" href="#">GATE</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link">Study Resources</a>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+            <div class="offcanvas offcanvas-end offcanvas-lg" tabindex="-1" id="navbarOffcanvas" aria-labelledby="navbarOffcanvasLabel">
+                <div class="offcanvas-header d-lg-none">
+                    <h5 class="offcanvas-title" id="navbarOffcanvasLabel">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#navbarOffcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="gap: 16px;">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Courses
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">IIT/JEE</a></li>
+                                <li><a class="dropdown-item" href="#">NEET/UG</a></li>
+                                <li><a class="dropdown-item" href="#">GATE</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">Study Resources</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex mt-3 mt-lg-0" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
             </div>
         </div>
     </nav>
+    <!-- navigation bar ends -->
 
     <!-- Main content area -->
     <main style="padding-top: 50px; background-color: #e7e7e7;">
@@ -194,35 +192,35 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <div class="contact-container">
-            <a href="courses.html" style="text-decoration: none;">
-                <div class="contact-card green-card">
-                    <div class="card-top">
-                        <img src="https://img.icons8.com/ios-filled/100/ffffff/chat-message.png
-" alt="Icon" class="card-icon">
-                        <h3>Courses</h3>
+        <!-- Contact and Courses CTA Section -->
+        <section class="container py-5">
+            <div class="row g-4 justify-content-center">
+                <div class="col-12 col-md-6 col-lg-5">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body d-flex align-items-start gap-3">
+                            <i class="bi bi-journal-bookmark fs-2 text-primary"></i>
+                            <div>
+                                <h4 class="mb-1">Explore Courses</h4>
+                                <p class="mb-3 text-muted">Browse our curated programs across IIT/JEE, NEET/UG and GATE.</p>
+                                <a href="courses.html" class="btn btn-primary">View Courses</a>
+                            </div>
+                        </div>
                     </div>
-                    <p style="color: black;">have a look at courses we have to offer you
-            </p>
-        </div>
-        </a>
-        <div class="contact-container">
-            <a href="courses.html" style="text-decoration: none;">
-                <div class="contact-card blue-card">
-                    <div class="card-top">
-                        <img src="https://img.icons8.com/ios-filled/100/ffffff/chat-message.png
-" alt="Icon" class="card-icon">
-                        <h3>Contacct us</h3>
+                </div>
+                <div class="col-12 col-md-6 col-lg-5">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body d-flex align-items-start gap-3">
+                            <i class="bi bi-chat-dots fs-2 text-success"></i>
+                            <div>
+                                <h4 class="mb-1">Contact Us</h4>
+                                <p class="mb-3 text-muted">Have questions? We're here to help you choose the right path.</p>
+                                <a href="contact.html" class="btn btn-outline-success">Get in Touch</a>
+                            </div>
+                        </div>
                     </div>
-                    <p style="color: black;">if you have any querries dont hesitate to reach us
-            </p>
-        </div>
-        </a>
-
-        
-            
-
+                </div>
+            </div>
+        </section>
 
     </main>
 

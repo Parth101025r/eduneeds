@@ -1,133 +1,420 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Page Title</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - EduPlatform</title>
+  
+  
+  <style>
+    :root {
+      --primary-color: #2563eb;
+      --secondary-color: #1e40af;
+      --accent-color: #f97316;
+      --success-color: #059669;
+      --danger-color: #dc2626;
+      --dark-color: #1f2937;
+      --light-bg: #f8fafc;
+      --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      --card-shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+    }
+    
+  
 
-  <!-- Stylesheets -->
+    
+    /* Hero Section */
+    .hero-section {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 1rem;
+      padding: 3rem 2rem;
+      margin: 2rem 0;
+      text-align: center;
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .hero-section h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .hero-section p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    @media (max-width: 768px) {
+      .hero-section {
+        padding: 2rem 1.5rem;
+        margin: 1rem 0;
+      }
+      
+      .hero-section h1 {
+        font-size: 2rem;
+      }
+    }
+    
+    /* Contact Cards */
+    .contact-card {
+      background: white;
+      border-radius: 1rem;
+      padding: 2rem;
+      box-shadow: var(--card-shadow);
+      transition: all 0.3s ease;
+      height: 100%;
+      border: none;
+    }
+    
+    .contact-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--card-shadow-hover);
+    }
+    
+    .contact-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: white;
+      margin-bottom: 1rem;
+    }
+    
+    .contact-icon.phone {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    }
+    
+    .contact-icon.email {
+      background: linear-gradient(135deg, var(--success-color), #10b981);
+    }
+    
+    .contact-icon.location {
+      background: linear-gradient(135deg, var(--danger-color), #ef4444);
+    }
+    
+    .contact-card h5 {
+      color: var(--dark-color);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    
+    .contact-card p, .contact-card a {
+      color: #6b7280;
+      margin-bottom: 0.25rem;
+    }
+    
+    .contact-card a {
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .contact-card a:hover {
+      color: var(--primary-color);
+    }
+    
+    @media (max-width: 768px) {
+      .contact-card {
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+      }
+    }
+    
+    /* Form Section */
+    .form-section {
+      background: white;
+      border-radius: 1rem;
+      padding: 2.5rem;
+      box-shadow: var(--card-shadow);
+      height: 100%;
+    }
+    
+    .form-section h3 {
+      color: var(--dark-color);
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+    
+    .form-label {
+      font-weight: 500;
+      color: var(--dark-color);
+      margin-bottom: 0.5rem;
+    }
+    
+    .form-control {
+      border: 2px solid #e5e7eb;
+      border-radius: 0.5rem;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+    
+    .form-control:focus {
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    }
+    
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      border: none;
+      border-radius: 0.5rem;
+      padding: 0.875rem 2rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    }
+    
+    @media (max-width: 768px) {
+      .form-section {
+        padding: 2rem 1.5rem;
+      }
+    }
+    
+    /* Map Section */
+    .map-section {
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: var(--card-shadow);
+      height: 100%;
+      min-height: 400px;
+    }
+    
+    .map-section iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    
+    
+    
+    /* Mobile optimizations */
+    @media (max-width: 576px) {
+      .container {
+        padding: 0 1rem;
+      }
+      
+      .hero-section h1 {
+        font-size: 1.75rem;
+      }
+      
+      .btn-primary {
+        width: 100%;
+        padding: 1rem;
+      }
+      
+      .social-icons {
+        justify-content: center;
+      }
+    }
+    
+    /* Loading animation for better UX */
+    .loading {
+      opacity: 0;
+      animation: fadeInUp 0.6s ease forwards;
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    /* Accessibility improvements */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+  </style>
   <link rel="stylesheet" href="css/style.css" />
+ 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
 </head>
-<body style="background-color: #e7e7e7;">
-  <!-- Navbar -->
- <nav class="navbar navbar-expand-lg sticky-top  bg-body-tertiary" style="position: sticky; height: 10vh;">
+
+<body>
+  <!-- navigation bar starts here -->
+    <nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary" style="position: sticky;">
         <div class="container-fluid">
             <a class="navbar-brand navigation-bar" href="#"><img src="assets/img/waveBG.jpg"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvas" aria-controls="navbarOffcanvas" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-  <button type="button" class="btn-close d-lg-none ms-auto mb-3" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-label="Close"></button>
-  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-  </ul>
 
-                 <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="gap: 40px;">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html"> About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html"> contact Us</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Courses
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">IIT/JEE</a></li>
-                            <li><a class="dropdown-item" href="#">NEET/UG</a></li>
-                            <li><a class="dropdown-item" href="#">GATE</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link">Study Resources</a>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+            <div class="offcanvas offcanvas-end offcanvas-lg" tabindex="-1" id="navbarOffcanvas" aria-labelledby="navbarOffcanvasLabel">
+                <div class="offcanvas-header d-lg-none">
+                    <h5 class="offcanvas-title" id="navbarOffcanvasLabel">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#navbarOffcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="gap: 16px;">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Courses
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">IIT/JEE</a></li>
+                                <li><a class="dropdown-item" href="#">NEET/UG</a></li>
+                                <li><a class="dropdown-item" href="#">GATE</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">Study Resources</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex mt-3 mt-lg-0" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
             </div>
         </div>
     </nav>
+    <!-- navigation bar ends -->
+  <!-- Main Content -->
+  <div class="container">
+    <!-- Hero Section -->
+    <section class="hero-section loading">
+      <h1>Get in Touch</h1>
+      <p>We'd love to hear from you. Whether you have questions about our courses, need support, or want to share feedback, we're here to help.</p>
+    </section>
 
-  <!-- Main content area -->
-  <main class="container my-5">
-    <section class="contact-section">
-    <div class="contact-header">
-      <h1>Contact Us</h1>
-      <p>
-        This is the <strong>official page of EduClasses</strong>, where you can share all your queries, feedback, complaints,
-        or any concern you may have about our centers, courses, and programs.
-      </p>
-      <p>
-        EduClasses, India’s loved education platform, is here to help students solve their grievances.
-        We aim to resolve your queries within 7 days. You can call on EduClasses's official Contact No.
-        <strong>1234567890, 24 x 7</strong>. If the phone is busy, we’re resolving someone else’s queries. We request you to contact us
-        again after 15 minutes so that we can address your query or concern you may have regarding lectures or course material.
-        You may notify us in the "contact us" section only. Your suggestions will help us improve and give you and all the children
-        a bright future.
-      </p>
-      <p>
-        In Case of any grievance, don’t hesitate to get in touch with us on EduClasses’s official contact number
-        <strong>07019243492</strong>. Or you can write to us at <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mail@gmail.com"><strong>mail@gmail.com</strong></a>.
-      </p>
-      <hr>
-    </div>
-
-    <div class="contact-info">
-      <div class="info-box">
-        <h2>EduClasses</h2>
-        <p><strong>KLJ Noida one</strong></p>
-        <p>B B, Block B, Industrial Area,<br> Sector 62, Noida,<br> Uttar Pradesh 201309</p>
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mail@gmail.com" class="email-link">mail@gmail.com</a>
-        <br><br>
-        <a href="https://www.google.com/maps?q=KLJ+Noida+One" target="_blank" class="map-button scale">📍 Get Directions</a>
-      </div>
-
-      <div class="map-box">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14007.416799117006!2d77.371276!3d28.6259366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce540b96a16b5%3A0x5ef5174062ec535f!2sKLJ%20Noida%20One!5e0!3m2!1sen!2sin!4v1721111111111!5m2!1sen!2sin"
-          width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
-        </iframe>
-      </div>
-    </div>
-    
-  </section>
-   <div class="contact-container">
-            <a href="courses.html" style="text-decoration: none;">
-                <div class="contact-card green-card">
-                    <div class="card-top">
-                        <img src="https://img.icons8.com/ios-filled/100/ffffff/chat-message.png
-" alt="Icon" class="card-icon">
-                        <h3>Mail Us </h3>
-                    </div>
-                   <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mail@gmail.com">  <p style="color: black; font-size: 35px;"> Mail@gmail.com  </p></a>
+    <!-- Contact Info Cards -->
+    <section class="row g-4 mb-5">
+      <div class="col-12 col-md-4">
+        <div class="contact-card loading" style="animation-delay: 0.1s">
+          <div class="contact-icon phone">
+            <i class="bi bi-telephone-fill"></i>
+          </div>
+          <h5>Call Us</h5>
+          <p class="fw-semibold">+91 12345 67890</p>
+          <small class="text-muted">Monday - Saturday<br>9:00 AM - 7:00 PM IST</small>
         </div>
-        </a>
-        <div class="contact-container">
-            
-                <div class="contact-card blue-card">
-                    <div class="card-top">
-                        <img src="https://img.icons8.com/ios-filled/100/ffffff/chat-message.png
-" alt="Icon" class="card-icon">
-                        <h3>Call Us</h3>
-                    </div>
-                     <p style="color: black; font-size: 35px;"> +91 12345 67890 </p>
+      </div>
+      
+      <div class="col-12 col-md-4">
+        <div class="contact-card loading" style="animation-delay: 0.2s">
+          <div class="contact-icon email">
+            <i class="bi bi-envelope-fill"></i>
+          </div>
+          <h5>Email Us</h5>
+          <a href="mailto:contact@eduplatform.com" class="fw-semibold">contact@eduplatform.com</a>
+          <br>
+          <small class="text-muted">We reply within 24 hours</small>
         </div>
-        
+      </div>
+      
+      <div class="col-12 col-md-4">
+        <div class="contact-card loading" style="animation-delay: 0.3s">
+          <div class="contact-icon location">
+            <i class="bi bi-geo-alt-fill"></i>
+          </div>
+          <h5>Visit Us</h5>
+          <p class="fw-semibold">KLJ Noida One, Sector 62<br>Noida, UP 201309</p>
+          <a href="https://www.google.com/maps?q=KLJ+Noida+One" target="_blank">
+            <i class="bi bi-arrow-up-right"></i> Get Directions
+          </a>
+        </div>
+      </div>
+    </section>
 
-  </main>
+    <!-- Contact Form and Map -->
+    <section class="row g-4 mb-5">
+      <div class="col-12 col-lg-6">
+        <div class="form-section loading" style="animation-delay: 0.4s">
+          <h3><i class="bi bi-chat-dots me-2"></i>Send us a Message</h3>
+          <form id="contactForm">
+            <div class="row g-3">
+              <div class="col-12 col-sm-6">
+                <label for="firstName" class="form-label">First Name</label>
+                <input type="text" class="form-control" id="firstName" required>
+              </div>
+              <div class="col-12 col-sm-6">
+                <label for="lastName" class="form-label">Last Name</label>
+                <input type="text" class="form-control" id="lastName" required>
+              </div>
+              <div class="col-12">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="email" required>
+              </div>
+              <div class="col-12">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" id="phone">
+              </div>
+              <div class="col-12">
+                <label for="subject" class="form-label">Subject</label>
+                <select class="form-control" id="subject" required>
+                  <option value="">Choose a topic...</option>
+                  <option value="course-inquiry">Course Inquiry</option>
+                  <option value="technical-support">Technical Support</option>
+                  <option value="billing">Billing Question</option>
+                  <option value="feedback">Feedback</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="5" required placeholder="Tell us how we can help you..."></textarea>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary btn-lg">
+                  <i class="bi bi-send me-2"></i>Send Message
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      
+      <div class="col-12 col-lg-6">
+        <div class="map-section loading" style="animation-delay: 0.5s">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14007.416799117006!2d77.371276!3d28.6259366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce540b96a16b5%3A0x5ef5174062ec535f!2sKLJ%20Noida%20One!5e0!3m2!1sen!2sin!4v1721111111111!5m2!1sen!2sin"
+            allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </div>
 
-  <!-- Footer -->
-   <footer class="footer">
+       <!-- Footer -->
+    <footer class="footer">
         <div class="footer-container">
             <div class="footer-section">
                 <h4>About Us</h4>
@@ -157,9 +444,63 @@
         </div>
     </footer>
 
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- JS Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/script.js"></script>
+    <script src="js/script.js"></script>
+  <script>
+    // Form handling
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Get form data
+      const formData = new FormData(this);
+      const data = Object.fromEntries(formData);
+      
+      // Simple validation
+      if (!data.firstName || !data.email || !data.message) {
+        alert('Please fill in all required fields.');
+        return;
+      }
+      
+      // Simulate form submission
+      const submitBtn = this.querySelector('button[type="submit"]');
+      const originalText = submitBtn.innerHTML;
+      
+      submitBtn.innerHTML = '<i class="bi bi-hourglass-split me-2"></i>Sending...';
+      submitBtn.disabled = true;
+      
+      setTimeout(() => {
+        alert('Thank you for your message! We\'ll get back to you soon.');
+        this.reset();
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+      }, 2000);
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+    
+    // Auto-close mobile menu when clicking links
+    document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+        if (navbarCollapse.classList.contains('show')) {
+          bootstrap.Collapse.getInstance(navbarCollapse).hide();
+        }
+      });
+    });
+  </script>
 </body>
 </html>
