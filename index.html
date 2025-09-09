@@ -7,64 +7,54 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
 </head>
 
 <body>
     <!-- navigation bar starts here -->
-    <nav class="navbar navbar-expand-lg sticky-top  bg-body-tertiary" style="position: sticky; height: 10vh;">
+    <nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary" style="position: sticky;">
         <div class="container-fluid">
             <a class="navbar-brand navigation-bar" href="#"><img src="assets/img/waveBG.jpg"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvas" aria-controls="navbarOffcanvas" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-  <button type="button" class="btn-close d-lg-none ms-auto mb-3" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-label="Close"></button>
-  
-  <!-- Rest of your nav content -->
-  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-   
-  </ul>
-</div>
 
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="gap: 40px;">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html"> About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html"> contact Us</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Courses
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">IIT/JEE</a></li>
-                            <li><a class="dropdown-item" href="#">NEET/UG</a></li>
-                            <li><a class="dropdown-item" href="#">GATE</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link">Study Resources</a>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+            <div class="offcanvas offcanvas-end offcanvas-lg" tabindex="-1" id="navbarOffcanvas" aria-labelledby="navbarOffcanvasLabel">
+                <div class="offcanvas-header d-lg-none">
+                    <h5 class="offcanvas-title" id="navbarOffcanvasLabel">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#navbarOffcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="gap: 16px;">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Courses
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">IIT/JEE</a></li>
+                                <li><a class="dropdown-item" href="#">NEET/UG</a></li>
+                                <li><a class="dropdown-item" href="#">GATE</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">Study Resources</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex mt-3 mt-lg-0" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
             </div>
         </div>
     </nav>
@@ -150,210 +140,249 @@
             </div>
         </div>
         <!-- colourful boxes ends -->
-        <!-- teachers cards -->
-        <div class="carousel-container" id="teachersCarousel">
+        <!-- teachers cards (Bootstrap Carousel) -->
+        <section class="container py-5" id="teachersCarousel">
             <h2 class="course-heading" style="background-color: #1E3A8A;">Study from Top Faculty</h2>
-            <div class="carousel-track" id="teachersTrack">
-                <!-- Slide 1 -->
-                <div class="carousel-slide">
-                    <a href="#" class="card-link">
-                        <div class="card">
-                            <div class="position-relative">
-                                <img src="assets/img/teacher.jpg" alt="Teacher">
-                                <span class="badge">₹118</span>
+            <div id="facultyCarousel" class="carousel slide" data-bs-ride="false">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row g-3">
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <div class="card h-100">
+                                    <div class="ratio ratio-16x9">
+                                        <img src="assets/img/teacher.jpg" class="w-100 h-100 object-fit-cover" alt="Teacher">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-title fw-bold">Python for Data Science</div>
+                                        <p class="mb-1">by Mario Speedwagon</p>
+                                        <p class="text-warning mb-0">★★★★☆ 4.9 (120)</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="card-body">
-                                <div class="card-title">Python for Data Science</div>
-                                <p>by Mario Speedwagon</p>
-                                <p class="text-warning">★★★★☆ 4.9 (120)</p>
+                            <div class="col-12 col-sm-6 col-lg-3 d-none d-sm-block">
+                                <div class="card h-100">
+                                    <div class="ratio ratio-16x9">
+                                        <img src="assets/img/teacher.jpg" class="w-100 h-100 object-fit-cover" alt="Teacher">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-title fw-bold">JavaScript Fundamentals</div>
+                                        <p class="mb-1">by Anna Smith</p>
+                                        <p class="text-warning mb-0">★★★★★ 4.8 (98)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-3 d-none d-lg-block">
+                                <div class="card h-100">
+                                    <div class="ratio ratio-16x9">
+                                        <img src="assets/img/teacher.jpg" class="w-100 h-100 object-fit-cover" alt="Teacher">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-title fw-bold">Machine Learning Basics</div>
+                                        <p class="mb-1">by John Doe</p>
+                                        <p class="text-warning mb-0">★★★★☆ 4.7 (200)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-3 d-none d-lg-block">
+                                <div class="card h-100">
+                                    <div class="ratio ratio-16x9">
+                                        <img src="assets/img/teacher.jpg" class="w-100 h-100 object-fit-cover" alt="Teacher">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-title fw-bold">Web Development</div>
+                                        <p class="mb-1">by Sarah Johnson</p>
+                                        <p class="text-warning mb-0">★★★★★ 4.9 (150)</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </a>
-                    <a href="#" class="card-link">
-                        <div class="card">
-                            <div class="position-relative">
-                                <img src="assets/img/teacher.jpg" alt="Teacher">
-                                <span class="badge">₹95</span>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row g-3">
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <div class="card h-100">
+                                    <div class="ratio ratio-16x9">
+                                        <img src="assets/img/teacher.jpg" class="w-100 h-100 object-fit-cover" alt="Teacher">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-title fw-bold">Advanced React</div>
+                                        <p class="mb-1">by Mike Wilson</p>
+                                        <p class="text-warning mb-0">★★★★☆ 4.6 (85)</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="card-body">
-                                <div class="card-title">JavaScript Fundamentals</div>
-                                <p>by Anna Smith</p>
-                                <p class="text-warning">★★★★★ 4.8 (98)</p>
+                            <div class="col-12 col-sm-6 col-lg-3 d-none d-sm-block">
+                                <div class="card h-100">
+                                    <div class="ratio ratio-16x9">
+                                        <img src="assets/img/teacher.jpg" class="w-100 h-100 object-fit-cover" alt="Teacher">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-title fw-bold">Database Design</div>
+                                        <p class="mb-1">by Emma Davis</p>
+                                        <p class="text-warning mb-0">★★★★★ 4.8 (110)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-3 d-none d-lg-block">
+                                <div class="card h-100">
+                                    <div class="ratio ratio-16x9">
+                                        <img src="assets/img/teacher.jpg" class="w-100 h-100 object-fit-cover" alt="Teacher">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-title fw-bold">Cloud Computing</div>
+                                        <p class="mb-1">by David Brown</p>
+                                        <p class="text-warning mb-0">★★★★☆ 4.7 (95)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-3 d-none d-lg-block">
+                                <div class="card h-100">
+                                    <div class="ratio ratio-16x9">
+                                        <img src="assets/img/teacher.jpg" class="w-100 h-100 object-fit-cover" alt="Teacher">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-title fw-bold">UI/UX Design</div>
+                                        <p class="mb-1">by Lisa Garcia</p>
+                                        <p class="text-warning mb-0">★★★★★ 4.9 (180)</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </a>
-                    <a href="#" class="card-link">
-                        <div class="card">
-                            <div class="position-relative">
-                                <img src="assets/img/teacher.jpg" alt="Teacher">
-                                <span class="badge">₹150</span>
-                            </div>
-                            <div class="card-body">
-                                <div class="card-title">Machine Learning Basics</div>
-                                <p>by John Doe</p>
-                                <p class="text-warning">★★★★☆ 4.7 (200)</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" class="card-link">
-                        <div class="card">
-                            <div class="position-relative">
-                                <img src="assets/img/teacher.jpg" alt="Teacher">
-                                <span class="badge">₹85</span>
-                            </div>
-                            <div class="card-body">
-                                <div class="card-title">Web Development</div>
-                                <p>by Sarah Johnson</p>
-                                <p class="text-warning">★★★★★ 4.9 (150)</p>
-                            </div>
-                        </div>
-                    </a>
+                    </div>
                 </div>
-
-                <!-- Slide 2 -->
-                <div class="carousel-slide">
-                    <a href="#" class="card-link">
-                        <div class="card">
-                            <div class="position-relative">
-                                <img src="assets/img/teacher.jpg" alt="Teacher">
-                                <span class="badge">₹200</span>
-                            </div>
-                            <div class="card-body">
-                                <div class="card-title">Advanced React</div>
-                                <p>by Mike Wilson</p>
-                                <p class="text-warning">★★★★☆ 4.6 (85)</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" class="card-link">
-                        <div class="card">
-                            <div class="position-relative">
-                                <img src="assets/img/teacher.jpg" alt="Teacher">
-                                <span class="badge">₹120</span>
-                            </div>
-                            <div class="card-body">
-                                <div class="card-title">Database Design</div>
-                                <p>by Emma Davis</p>
-                                <p class="text-warning">★★★★★ 4.8 (110)</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" class="card-link">
-                        <div class="card">
-                            <div class="position-relative">
-                                <img src="assets/img/teacher.jpg" alt="Teacher">
-                                <span class="badge">₹175</span>
-                            </div>
-                            <div class="card-body">
-                                <div class="card-title">Cloud Computing</div>
-                                <p>by David Brown</p>
-                                <p class="text-warning">★★★★☆ 4.7 (95)</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" class="card-link">
-                        <div class="card">
-                            <div class="position-relative">
-                                <img src="assets/img/teacher.jpg" alt="Teacher">
-                                <span class="badge">₹140</span>
-                            </div>
-                            <div class="card-body">
-                                <div class="card-title">UI/UX Design</div>
-                                <p>by Lisa Garcia</p>
-                                <p class="text-warning">★★★★★ 4.9 (180)</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#facultyCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#facultyCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-
-            <!-- Controls -->
-            <div class="carousel-controls">
-                <button class="carousel-btn" id="teachersPrevBtn">&#8249;</button>
-                <button class="carousel-btn" id="teachersNextBtn">&#8250;</button>
-            </div>
-        </div>
+        </section>
 
         <!-- teachers section ends -->
         <!-- course section starts -->
-        <div class="carousel-container" id="courses">
+        <!-- course section (Bootstrap Carousel) -->
+        <section class="container py-5" id="courses">
             <h2 class="course-heading">Explore our courses</h2>
-            <div class="carousel-track">
-                <!-- Slide 1 -->
-                <div class="carousel-slide">
-                    <a href="#" class="card-link">
-                        <div class="card">
-                            <div class="position-relative">
-                                <img src="assets/img/waveBG.jpg" alt="Course">
-                                <span class="badge">$118</span>
+            <div id="coursesCarousel" class="carousel slide" data-bs-ride="false">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row g-3">
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <div class="card h-100">
+                                    <div class="ratio ratio-16x9">
+                                        <img src="assets/img/waveBG.jpg" class="w-100 h-100 object-fit-cover" alt="Course">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-title fw-bold">Python for Data Science</div>
+                                        <p class="mb-1">by Mario Speedwagon</p>
+                                        <p class="text-warning mb-0">★★★★☆ 4.9 (120)</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="card-body">
-                                <div class="card-title">Python for Data Science</div>
-                                <p>by Mario Speedwagon</p>
-                                <p class="text-warning">★★★★☆ 4.9 (120)</p>
+                            <div class="col-12 col-sm-6 col-lg-3 d-none d-sm-block">
+                                <div class="card h-100">
+                                    <div class="ratio ratio-16x9">
+                                        <img src="assets/img/random1.jpg" class="w-100 h-100 object-fit-cover" alt="Course">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-title fw-bold">Data Analysis</div>
+                                        <p class="mb-1">by Jane Roe</p>
+                                        <p class="text-warning mb-0">★★★★★ 4.8 (98)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-3 d-none d-lg-block">
+                                <div class="card h-100">
+                                    <div class="ratio ratio-16x9">
+                                        <img src="assets/img/random2.jpg" class="w-100 h-100 object-fit-cover" alt="Course">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-title fw-bold">Machine Learning</div>
+                                        <p class="mb-1">by John Doe</p>
+                                        <p class="text-warning mb-0">★★★★☆ 4.7 (200)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-3 d-none d-lg-block">
+                                <div class="card h-100">
+                                    <div class="ratio ratio-16x9">
+                                        <img src="assets/img/waveBG.jpg" class="w-100 h-100 object-fit-cover" alt="Course">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-title fw-bold">Web Development</div>
+                                        <p class="mb-1">by Sarah Johnson</p>
+                                        <p class="text-warning mb-0">★★★★★ 4.9 (150)</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </a>
-                    <a href="#" class="card-link">
-                        <div class="card">
-                            <div class="position-relative">
-                                <img src="assets/img/random1.jpg" alt="Course">
-                                <span class="badge">$118</span>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row g-3">
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <div class="card h-100">
+                                    <div class="ratio ratio-16x9">
+                                        <img src="assets/img/random1.jpg" class="w-100 h-100 object-fit-cover" alt="Course">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-title fw-bold">Cloud Computing</div>
+                                        <p class="mb-1">by David Brown</p>
+                                        <p class="text-warning mb-0">★★★★☆ 4.7 (95)</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="card-body">
-                                <div class="card-title">Python for Data Science</div>
-                                <p>by Mario Speedwagon</p>
-                                <p class="text-warning">★★★★☆ 4.9 (120)</p>
+                            <div class="col-12 col-sm-6 col-lg-3 d-none d-sm-block">
+                                <div class="card h-100">
+                                    <div class="ratio ratio-16x9">
+                                        <img src="assets/img/waveBG.jpg" class="w-100 h-100 object-fit-cover" alt="Course">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-title fw-bold">Database Design</div>
+                                        <p class="mb-1">by Emma Davis</p>
+                                        <p class="text-warning mb-0">★★★★★ 4.8 (110)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-3 d-none d-lg-block">
+                                <div class="card h-100">
+                                    <div class="ratio ratio-16x9">
+                                        <img src="assets/img/random2.jpg" class="w-100 h-100 object-fit-cover" alt="Course">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-title fw-bold">UI/UX Design</div>
+                                        <p class="mb-1">by Lisa Garcia</p>
+                                        <p class="text-warning mb-0">★★★★★ 4.9 (180)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-3 d-none d-lg-block">
+                                <div class="card h-100">
+                                    <div class="ratio ratio-16x9">
+                                        <img src="assets/img/waveBG.jpg" class="w-100 h-100 object-fit-cover" alt="Course">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-title fw-bold">Data Engineering</div>
+                                        <p class="mb-1">by Mark Lee</p>
+                                        <p class="text-warning mb-0">★★★★☆ 4.6 (140)</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </a>
-                    <a href="#" class="card-link">
-                        <div class="card">
-                            <div class="position-relative">
-                                <img src="assets/img/random2.jpg" alt="Course">
-                                <span class="badge">$118</span>
-                            </div>
-                            <div class="card-body">
-                                <div class="card-title">Python for Data Science</div>
-                                <p>by Mario Speedwagon</p>
-                                <p class="text-warning">★★★★☆ 4.9 (120)</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" class="card-link">
-                        <div class="card">
-                            <div class="position-relative">
-                                <img src="assets/img/waveBG.jpg" alt="Course">
-                                <span class="badge">$118</span>
-                            </div>
-                            <div class="card-body">
-                                <div class="card-title">Python for Data Science</div>
-                                <p>by Mario Speedwagon</p>
-                                <p class="text-warning">★★★★☆ 4.9 (120)</p>
-                            </div>
-                        </div>
-                    </a>
-
+                    </div>
                 </div>
-
-                <!-- Slide 2 -->
-                <div class="carousel-slide">
-                    <!-- 4 new cards -->
-                    <div class="card"> ... </div>
-                    <div class="card"> ... </div>
-                    <div class="card"> ... </div>
-                    <div class="card"> ... </div>
-                </div>
-
-                <!-- Add more slides as needed -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#coursesCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#coursesCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-
-            <!-- Controls -->
-            <div class="carousel-controls">
-                <button class="carousel-btn" id="prevBtn">&#8249;</button>
-                <button class="carousel-btn" id="nextBtn">&#8250;</button>
-            </div>
-        </div>
+        </section>
         
 
         <!-- course section ends -->
@@ -487,8 +516,6 @@
     </div>
 
     <!-- all javascript here-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="js/script.js"></script>

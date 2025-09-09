@@ -1055,6 +1055,8 @@ img, video {
 /* Avoid cramped navbar on small screens (override inline height) */
 .navbar {
   height: auto !important;
+  padding-top: 0.35rem;
+  padding-bottom: 0.35rem;
 }
 
 /* Brand image should scale fluidly */
@@ -1062,6 +1064,23 @@ img, video {
   width: auto;
   max-width: 160px;
   height: auto;
+}
+
+/* Make navbar a bit narrower via brand image height cap */
+.navbar-brand img {
+  max-height: 40px;
+  height: auto;
+  width: auto;
+}
+
+@media (min-width: 992px) {
+  .navbar {
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+  }
+  .navbar-brand img {
+    max-height: 44px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -1078,6 +1097,19 @@ img, video {
 /* Default: let cards shrink nicely */
 .card {
   max-width: 100%;
+}
+
+/* Ensure consistent, responsive image areas for carousels (Courses & Faculty) */
+.carousel-container .card .position-relative {
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.carousel-container .card .position-relative img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Make slide cards stack on very small screens */
@@ -1164,5 +1196,25 @@ img, video {
   .hexagon:hover,
   .founder-card:hover {
     transform: scale(1.03);
+  }
+}
+
+/* Android/mobile tuning for carousel cards: make images smaller and cards auto-height */
+@media (max-width: 576px) {
+  .carousel-container .card {
+    height: auto;
+  }
+  .carousel-container .card .position-relative {
+    aspect-ratio: 4/3;
+  }
+  .carousel-container .card .position-relative img {
+    object-fit: cover;
+    object-position: center;
+  }
+  .carousel-container .card img {
+    max-height: 170px;
+  }
+  .carousel-container .card .card-body {
+    padding: 10px;
   }
 }
