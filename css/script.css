@@ -1,0 +1,226 @@
+.navigation-bar img {
+    width: 200px;
+    height: 50px;
+}
+
+.navbar-nav a {
+    border-radius: 20px;
+
+}
+
+.navbar-nav a:hover {
+    background-color: blue;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.navbar.dark-mode {
+    background-color: #1f1f1f;
+    color: white;
+}
+
+.form-control.dark-mode {
+    background-color: #333;
+    color: white;
+    border-color: #555;
+}
+
+.btn-outline-success.dark-mode {
+    color: white;
+    border-color: white;
+}
+
+.p-4:hover {
+    scale: 1.2;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 40px 1px;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 20px;
+}
+
+.carousel-slide {
+    display: flex;
+    gap: 5px;
+    min-width: 100%;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    flex: 0 0 25%;
+}
+
+.card {
+    width: 300px;
+    /* wider */
+    height: 400px;
+    /* taller */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 1px;
+    flex: 1;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: red;
+    color: white;
+    padding: 4px 8px;
+    font-size: 0.8rem;
+    border-radius: 5px;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 10px;
+}
+
+.carousel-btn {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: none;
+    color: white;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.course-heading {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+
+.card:hover {
+    scale: 1.2;
+}
+
+.course-heading {
+    background-color: orangered;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.footer {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 40px 20px 20px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-section {
+    flex: 1 1 250px;
+}
+
+.footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #f39c12;
+}
+
+.footer-section p,
+.footer-section a {
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.6;
+    text-decoration: none;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a:hover {
+    color: #fff;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    padding-top: 5px;
+}
+
+.social-icons li a i {
+    font-size: 20px;
+    color: #f39c12;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #aaa;
+    border-top: 1px solid #444;
+    padding-top: 15px;
+}
