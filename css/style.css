@@ -1041,3 +1041,128 @@ hr {
   cursor: pointer;
   opacity: 1 !important;
 }
+
+/* ========================= */
+/* Responsive enhancements   */
+/* ========================= */
+
+/* Media elements scale down on small screens */
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Avoid cramped navbar on small screens (override inline height) */
+.navbar {
+  height: auto !important;
+}
+
+/* Brand image should scale fluidly */
+.navigation-bar img {
+  width: auto;
+  max-width: 160px;
+  height: auto;
+}
+
+@media (max-width: 576px) {
+  .navigation-bar img {
+    max-width: 120px;
+  }
+}
+
+/* Carousel/card responsiveness */
+.carousel-slide {
+  gap: 12px;
+}
+
+/* Default: let cards shrink nicely */
+.card {
+  max-width: 100%;
+}
+
+/* Make slide cards stack on very small screens */
+@media (max-width: 480px) {
+  .card-link {
+    flex: 0 0 100%;
+  }
+  .card {
+    width: 100%;
+    height: auto;
+  }
+  .card img {
+    height: auto;
+    max-height: 220px;
+  }
+}
+
+/* Small-to-medium: show two cards per row in carousels */
+@media (min-width: 481px) and (max-width: 767.98px) {
+  .card-link {
+    flex: 0 0 calc(50% - 12px);
+  }
+  .card {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Contact cards: avoid fixed width overflow */
+.contact-card {
+  width: 100%;
+  max-width: 520px;
+  min-height: auto;
+}
+
+/* Typography scaling */
+.course-heading,
+.test-section-title,
+.section-title {
+  font-size: clamp(1.5rem, 2.5vw + 1rem, 2.5rem);
+}
+
+.none-matched {
+  font-size: clamp(1.25rem, 4vw + 0.5rem, 2rem);
+}
+
+/* Price row spacing on small screens */
+@media (max-width: 576px) {
+  .price-row {
+    gap: 20px;
+  }
+  .price-row span {
+    font-size: 22px;
+  }
+}
+
+/* Item page layout safeguards */
+@media (max-width: 992px) {
+  .bottom-row {
+    flex-direction: column;
+    height: auto;
+  }
+  .buy-box {
+    padding: 24px 0;
+    margin-top: 16px;
+  }
+}
+
+/* Teacher avatars on small screens */
+@media (max-width: 576px) {
+  .teacher img {
+    width: 140px;
+    height: 140px;
+  }
+  .teachers {
+    gap: 16px;
+  }
+}
+
+/* Reduce aggressive hover scales on small screens to prevent overflow */
+@media (max-width: 576px) {
+  .p-4:hover,
+  .card:hover,
+  .hexagon:hover,
+  .founder-card:hover {
+    transform: scale(1.03);
+  }
+}
